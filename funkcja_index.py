@@ -1,16 +1,17 @@
 def main():
-	imiona = ['Jakub', 'Stefan', 'Maria', 'Ewelina', 'Patrycja', 'Jurek', 'Marcin']
-	print('Stara lista imion: ', imiona, '.', sep='')
-	imię = input('Które imię ma zostać zamienione? ')
+	fnames = ['John', 'Steven', 'Mary', 'Eveline', 'Patrice', 'George', 'Martin']
+	print('Original list of names: ', fnames, '.', sep='')
+	fname = input('Input the name to be changed ? ')
 
 	try:
-		imię_index = imiona.index(imię)
-		nowe_imię = input('Podaj nowe imię: ')
-		imiona[imię_index] = nowe_imię
+		fname_index = fnames.index(fname)
+		new_fname = input('Type the new name: ')
+		fnames[fname_index] = new_fname
 
-		print('Nowa lista imon: ', imiona, '.', sep='')
+		print('New list of names: ', fnames, '.', sep='')
 	except ValueError:
-		print('Takie imię nie zostało znalezione na liście.')
+		print('There\'s no such name on the list.')
+		main()
 		
 	input()
 main()
